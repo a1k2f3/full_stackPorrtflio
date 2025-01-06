@@ -7,51 +7,52 @@ import Image from "next/image";
 import { Poppins } from 'next/font/google';
 import ProjectShowcase from "./Component/Project";
 import { motion } from "framer-motion";
-
+import { useScroll, useSpring } from "framer-motion";
 // Load Google Font
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
-// function ScrollLinked() {
-  // const { scrollYProgress } = useScroll();
-  // const scaleX = useSpring(scrollYProgress, {
-  //   stiffness: 100,
-  //   damping: 30,
-  //   restDelta: 0.001,
-  // });
-
-//   return (
-//     <motion.div
-//       id="scroll-indicator"
-//       style={{
-//         scaleX,
-//         position: "fixed",
-//         top: 0,
-//         left: 0,
-//         right: 0,
-//         height: 10,
-//         originX: 0,
-//         backgroundColor: "#ff0088",
-//         zIndex: 9999,
-//       }}
-//     />
-//   );
-// }
-
-export default function Home() {
-  // Scroll effect: Fade in elements when they come into view
-  const fadeInAnimation =()=> {
-   const { scrollYProgress } = useScroll();
+function ScrollLinked() {
+  const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   });
+
+  return (
+    <motion.div
+      id="scroll-indicator"
+      style={{
+        scaleX,
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        height: 10,
+        originX: 0,
+        backgroundColor: "#ff0088",
+        zIndex: 9999,
+      }}
+    />
+  );
+}
+
+export default function Home() {
+  // Scroll effect: Fade in elements when they come into view
+  const fadeInAnimation = () => {
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+      stiffness: 100,
+      damping: 30,
+      restDelta: 0.001,
+    });
   };
 
   return (
-    <div className={`${poppins.className}  min-h-screen bg-gray-900 text-white`}>
-      {/* <ScrollLinked /> */}
-      <Header/>
+    <div className={`${poppins.className} min-h-screen bg-gray-900 text-white`}>
+      {/* Scroll Indicator */}
+      <ScrollLinked />
+      <Header />
       <motion.div
         className="flex gap-10 justify-center items-center"
         initial="hidden"
@@ -150,7 +151,7 @@ export default function Home() {
           </div>
         </motion.section>
       </motion.section>
-        <ProjectShowcase />
+      <ProjectShowcase />
       <motion.section
         id="contact"
         className="p-10 bg-gray-800 rounded-tl-3xl rounded-tr-3xl mt-10"
