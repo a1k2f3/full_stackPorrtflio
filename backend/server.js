@@ -2,21 +2,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-
+import nodemailer from 'nodemailer'
 // Load environment variables
 dotenv.config();
-
 const app = express();
 const PORT = process.env.PORT || 5000;
-
 // Middleware
 app.use(express.json());
-
 // MongoDB connection using Mongoose
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect("mongodb://localhost:27017/")
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -28,8 +22,38 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
+app.post('/send-email', async (req, res) => {
+  const { email, subject, message } = req.body;
 
-// Start the server
+  if (!email || !subject || !message) {
+    return res.status(400).send('All fields are required.');
+  }
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    secure: true,
+    auth: {
+      port: 465,
+      user: "akifbutt935@gmail.com", 
+      pass: "mquq zczn tvix mbje"  
+    }
+  });
+
+  const mailOptions = {
+    from: email, // The sender's email (the user's email)
+    to: "akifbutt935@gmail.com", // Your email address
+    subject: `Contact Form: ${subject}`, 
+    text: `From: ${email}\n\n${message}` 
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent: ' + info.response);
+    res.status(200).send('Your message has been sent successfully.');
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).send('Error sending email: ' + error.message);
+  }
+});
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

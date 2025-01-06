@@ -12,12 +12,12 @@ import { motion } from "framer-motion";
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 // function ScrollLinked() {
-//   const { scrollYProgress } = useScroll();
-//   const scaleX = useSpring(scrollYProgress, {
-//     stiffness: 100,
-//     damping: 30,
-//     restDelta: 0.001,
-//   });
+  // const { scrollYProgress } = useScroll();
+  // const scaleX = useSpring(scrollYProgress, {
+  //   stiffness: 100,
+  //   damping: 30,
+  //   restDelta: 0.001,
+  // });
 
 //   return (
 //     <motion.div
@@ -39,9 +39,13 @@ const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 export default function Home() {
   // Scroll effect: Fade in elements when they come into view
-  const fadeInAnimation = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.75, ease: "easeOut" } }
+  const fadeInAnimation =()=> {
+   const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   };
 
   return (

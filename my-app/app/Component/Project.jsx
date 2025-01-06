@@ -23,7 +23,7 @@ const projects = [
     title: "Student manegment system",
     description: "A responsive portfolio website showcasing my projects and skills, built using Next.js.",
     image: "/images/portfolio.jpg",
-    link: "https://github.com/a1k2f3/student-mangement-system.git",
+    link: "https://github.com/a1k2f3/Student_manegment_System.git",
   },
   {
     id: 4,
