@@ -49,7 +49,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`${poppins.className} min-h-screen bg-gray-900 text-white`}>
+    <div className={`${poppins.className}  min-h-screen bg-gray-900 text-white`}>
       {/* <ScrollLinked /> */}
       <Header/>
       <motion.div
@@ -88,13 +88,13 @@ export default function Home() {
             </Link>
           </motion.div>
         </main>
-        <div className="w-1/3 md:w-1/4 lg:w-1/5">
+        <div className="w-1/3 md:w-1/5 lg:w-1/5">
           <Image
             src="/premium_photo-1683309565422-77818a287060.jpeg"
             alt="Akif - Full Stack Developer"
             className="rounded-full shadow-lg w-full h-auto"
             width={200}
-            height={200}
+            height={300}
           />
         </div>
       </motion.div>

@@ -7,14 +7,35 @@ const Form = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
-    // Logic to handle form submission (e.g., validation, API call, etc.)
-    console.log('Form submitted:', { name, email, subject, message });
-    setName("")
-    setMessage("")
-    setEmail("")
-    setSubject("")
+  const handleSubmit = async () => {
+    if (!name || !email || !subject || !message) {
+      alert('Please fill out all fields.');
+      return;
+    }
+  
+    try {
+      const values = { name,email, subject, message };
+      const data = await fetch("http://localhost:5000/send-email", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values)
+      });
+      const response = await data.json();
+      console.log('Response:', response);
+  
+      // Reset form fields
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to send message. Please try again.');
+    }
   };
+  
 
   return (
     <>

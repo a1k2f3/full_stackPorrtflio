@@ -32,7 +32,7 @@ const Header = () => {
         <Link href="#about" className="hover:text-gray-400 hover:scale-105 transform transition-transform duration-300 font-semibold tracking-wide">About</Link>
         <Link href="#Experience" className="hover:text-gray-400 hover:scale-105 transform transition-transform duration-300 font-semibold tracking-wide">Experience</Link>
         <Link href="#project" className="hover:text-gray-400 hover:scale-105 transform transition-transform duration-300 font-semibold tracking-wide">Projects</Link>
-        <Link href="#" className="hover:text-gray-400 hover:scale-105 transform transition-transform duration-300 font-semibold tracking-wide">Blogs</Link>
+        <Link href="blog" className="hover:text-gray-400 hover:scale-105 transform transition-transform duration-300 font-semibold tracking-wide">Blogs</Link>
       </nav>
 
       <a href="https://github.com/a1k2f3" target="_blank" rel="noopener noreferrer">
