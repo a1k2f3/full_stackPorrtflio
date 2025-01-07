@@ -1,14 +1,15 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Header from "./Component/Component";
-import Form from "./Component/Form";
-import Image from "next/image";
+import Link from 'next/link';
+import Header from './Component/Component';
+import Form from './Component/Form';
+import Image from 'next/image';
 import { Poppins } from 'next/font/google';
-import ProjectShowcase from "./Component/Project";
-import { motion } from "framer-motion";
-import { useScroll, useSpring } from "framer-motion";
+import ProjectShowcase from './Component/Project';
+import { motion } from 'framer-motion';
+import { useScroll, useSpring } from 'framer-motion';
 // Load Google Font
+
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 function ScrollLinked() {
@@ -24,13 +25,13 @@ function ScrollLinked() {
       id="scroll-indicator"
       style={{
         scaleX,
-        position: "fixed",
+        position: 'fixed',
         top: 0,
         left: 0,
         right: 0,
         height: 10,
         originX: 0,
-        backgroundColor: "#ff0088",
+        backgroundColor: '#ff0088',
         zIndex: 9999,
       }}
     />
@@ -54,7 +55,7 @@ export default function Home() {
       <ScrollLinked />
       <Header />
       <motion.div
-        className="flex gap-10 justify-center items-center"
+        className="flex gap-5 justify-center items-center flex-wrap"
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
@@ -89,7 +90,7 @@ export default function Home() {
             </Link>
           </motion.div>
         </main>
-        <div className="w-1/3 md:w-1/5 lg:w-1/5">
+        <div className="w-1/3 md:w-1/3 lg:w-1/5">
           <Image
             src="/premium_photo-1683309565422-77818a287060.jpeg"
             alt="Akif - Full Stack Developer"
@@ -109,9 +110,9 @@ export default function Home() {
       >
         <motion.h2 className="text-4xl font-bold mb-5">About</motion.h2>
         <motion.p className="text-gray-400 leading-relaxed">
-          I'm passionate about coding and building solutions to real-world problems.
-          With expertise in web development, Python, and Machine Learning, I am continuously learning
-          new skills to enhance my technical knowledge and provide value to projects.
+          With·expertise·in·web·development,·Python,·and·Machine·Learning,·I·am·continuously·learning␍⏎··········new·skills·to·enhance·my·technical·knowledge·and·provide·value·to·projects.␍`
+          with
+          `·problems.·With·expertise·in·web·development,·Python,·and·Machine⏎··········Learning,·I·am·continuously·learning·new·skills·to·enhance·my⏎··········technical·knowledge·and·p
         </motion.p>
 
         <motion.section
