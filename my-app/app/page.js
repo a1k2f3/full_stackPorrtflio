@@ -53,7 +53,7 @@ export default function Home() {
       <Header />
 
       <motion.div
-        className="flex gap-10 justify-center items-center flex-wrap mx-auto max-w-screen-xl py-10"
+        className="flex  justify-center items-center flex-wrap mx-auto max-w-screen-xl py-10"
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}

@@ -36,12 +36,7 @@ const page = () => {
   useEffect(() => {
     setName(blogPosts);
   }, []);
-  // title: 'Understanding Server Components in Next.js',
-  //   slug: 'server-components-nextjs',
-  //   date: '2025-01-05',
-  //   category: 'Next.js',
-  //   excerpt: 'A deep dive into server components in Next.js and how they improve performance.',
-  //   content: `
+ 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
       <h1 className="text-5xl font-bold text-center mb-8">My Advanced Blog</h1>
