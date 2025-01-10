@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import Header from './Component/Component';
 import Form from './Component/Form';
@@ -8,11 +7,8 @@ import { Poppins } from 'next/font/google';
 import ProjectShowcase from './Component/Project';
 import { motion } from 'framer-motion';
 import { useScroll, useSpring } from 'framer-motion';
-
-// Load Google Font
+import Footer from './Component/Footer';
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
-
-// Scroll Linked Component for Scroll Indicator
 function ScrollLinked() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -20,7 +16,6 @@ function ScrollLinked() {
     damping: 30,
     restDelta: 0.001,
   });
-
   return (
     <motion.div
       id="scroll-indicator"
@@ -106,7 +101,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
-      >
+      >,
         <motion.h2 className="text-4xl font-bold mb-5">About</motion.h2>
         <motion.p className="text-gray-400 leading-relaxed max-w-prose">
           With expertise in web development, Python, and Machine Learning, I am continuously learning new skills to enhance my technical knowledge and provide value to projects.
@@ -171,6 +166,7 @@ export default function Home() {
         <motion.h2 className="text-4xl font-bold mb-5">Contact</motion.h2>
         <Form id="contact" />
       </motion.section>
+      <Footer/>
     </div>
   );
 }
