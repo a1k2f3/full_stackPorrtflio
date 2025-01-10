@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from './Component/Component';
@@ -6,9 +7,7 @@ import ProjectShowcase from './Component/Project';
 import Footer from './Component/Footer';
 import { Poppins } from 'next/font/google';
 import { motion, useScroll, useSpring } from 'framer-motion';
-
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
-
 function ScrollIndicator() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -47,7 +46,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.div
-        className="flex flex-col items-center justify-center mx-auto max-w-screen-xl py-20 space-y-8 text-center"
+        className="flex  items-center justify-center mx-auto max-w-screen-xl py-20 space-y-8 text-center"
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
@@ -114,7 +113,7 @@ export default function Home() {
         whileInView="visible"
         variants={fadeInAnimation}
       >
-        <motion.h2 className="text-4xl font-bold mb-5 text-center">About Me</motion.h2>
+        <motion.h2 className="text-4xl font-bold mb-5 ">About Me</motion.h2>
         <motion.p className="text-gray-400 leading-relaxed max-w-prose mx-auto text-center">
           With expertise in web development, Python, and Machine Learning, I am continuously learning new skills to enhance my technical knowledge and provide value to projects.
         </motion.p>
