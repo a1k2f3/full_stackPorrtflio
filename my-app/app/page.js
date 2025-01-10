@@ -62,7 +62,7 @@ export default function Home() {
           <Image
             src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
             alt="Akif - Full Stack Developer"
-            className=" object-cover object-center rounded-full"
+            className=" object-cover object-center rounded-full w-full "
             width={320}
             height={320}
           />
