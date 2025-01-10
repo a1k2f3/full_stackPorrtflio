@@ -50,7 +50,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`${poppins.className} min-h-screen  bg-gray-900 overflow-hidden flex flex-col flex-wrap text-white`}>
+    <div className={`${poppins.className} min-h-screen  bg-gray-900 overflow-hidden  text-white`}>
       {/* Scroll Indicator */}
       <ScrollLinked />
       <Header />
