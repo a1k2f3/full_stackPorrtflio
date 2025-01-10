@@ -92,10 +92,10 @@ export default function Home() {
         </main>
         <div className="w-1/3 md:w-1/3 lg:w-1/5">
           <Image
-            src="/premium_photo-1683309565422-77818a287060.jpeg"
+            src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
             alt="Akif - Full Stack Developer"
             className="rounded-full shadow-lg w-full h-auto"
-            width={200}
+            width={300}
             height={300}
           />
         </div>
