@@ -96,7 +96,7 @@ export default function Home() {
       </motion.div>
 
       <motion.section
-        className="p-10 flex flex-col"
+        className="p-10 flex  flex-col"
         id="about"
         initial="hidden"
         whileInView="visible"
