@@ -50,12 +50,12 @@ export default function Home() {
   };
 
   return (
-    <div className={`${poppins.className} min-h-screen  bg-gray-900 overflow-hidden  text-white`}>
+    <div className={`${poppins.className} min-h-screen bg-gray-900 text-white`}>
       {/* Scroll Indicator */}
       <ScrollLinked />
       <Header />
       <motion.div
-        className="flex gap-5 justify-center items-center flex-wrap "
+        className="flex gap-5 justify-center items-center flex-wrap"
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
@@ -94,7 +94,7 @@ export default function Home() {
           <Image
             src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
             alt="Akif - Full Stack Developer"
-            className="rounded-full shadow-lg w-full  h-auto"
+            className="rounded-full shadow-lg w-full h-auto"
             width={300}
             height={300}
           />
