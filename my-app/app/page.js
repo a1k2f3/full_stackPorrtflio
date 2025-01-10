@@ -50,6 +50,7 @@ export default function Home() {
   };
 
   return (
+    <>
     <div className={`${poppins.className} min-h-screen bg-gray-900 text-white`}>
       {/* Scroll Indicator */}
       <ScrollLinked />
@@ -114,7 +115,7 @@ export default function Home() {
           with
           `·problems.·With·expertise·in·web·development,·Python,·and·Machine⏎··········Learning,·I·am·continuously·learning·new·skills·to·enhance·my⏎··········technical·knowledge·and·p
         </motion.p>
-
+</motion.section>
         <motion.section
           id="Experience"
           initial="hidden"
@@ -151,7 +152,7 @@ export default function Home() {
             </motion.div>
           </div>
         </motion.section>
-      </motion.section>
+      
       <ProjectShowcase />
       <motion.section
         id="contact"
@@ -164,5 +165,6 @@ export default function Home() {
         <Form id="contact" />
       </motion.section>
     </div>
+    </>
   );
 }
