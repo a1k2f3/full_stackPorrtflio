@@ -51,7 +51,7 @@ export default function Home() {
       <Header />
       
       <motion.div
-        className="flex gap-10 justify-center items-center "
+        className="flex gap-10 justify-center items-center  flex-wrap"
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
