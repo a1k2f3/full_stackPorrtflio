@@ -65,7 +65,7 @@ export default function Home() {
   height={320} // default size (optional)
 />
         </div>
-        <main className="flex flex-col items-center  justify-center  h-screen  text-center md:text-left">
+        <main className="flex flex-col items-center  justify-center  min-h-screen  text-center md:text-left">
           <motion.h2
             className="font-bold text-xl md:text-xl"
             initial="hidden"
