@@ -7,6 +7,7 @@ import ProjectShowcase from './Component/Project';
 import Footer from './Component/Footer';
 import { Poppins } from 'next/font/google';
 import { motion, useScroll, useSpring } from 'framer-motion';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 function ScrollIndicator() {
   const { scrollYProgress } = useScroll();
@@ -88,15 +89,53 @@ export default function Home() {
       {/* About Section */}
       <motion.section
         id="about"
-        className="p-10"
+        className="p-10 flex   items-center"
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
       >
+        <div>
         <motion.h2 className="text-4xl font-bold mb-5 ">About Me</motion.h2>
-        <motion.p className="text-gray-400 leading-relaxed max-w-prose mx-auto text-center">
+        <motion.p className="text-gray-400 leading-relaxed max-w-prose  ">
           With expertise in web development, Python, and Machine Learning, I am continuously learning new skills to enhance my technical knowledge and provide value to projects.
+        
         </motion.p>
+        <div className="flex  gap-6 mb-5">
+        {/* Social Media Links */}
+        <a
+          href="https://github.com/your-username"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white transition-colors duration-300"
+        >
+          <FaGithub size={24} />
+        </a>
+        <a
+          href="https://linkedin.com/in/your-username"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white transition-colors duration-300"
+        >
+          <FaLinkedin size={24} />
+        </a>
+        <a
+          href="mailto:your-email@example.com"
+          className="hover:text-white transition-colors duration-300"
+        >
+          <FaEnvelope size={24} />
+        </a>
+      </div>
+        </div>
+        <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
+    <Image
+      src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
+      alt="Akif - Full Stack Developer"
+      className="object-cover w-full h-full object-center rounded-full"
+      width={320}
+      height={320}
+    />
+  </div>
+        
       </motion.section>
 
       {/* Experience Section */}
@@ -128,6 +167,7 @@ export default function Home() {
             <p className="text-gray-400 mt-2">120+ Hours Experience</p>
           </motion.div>
         </div>
+        
       </motion.section>
 
       {/* Projects Section */}
