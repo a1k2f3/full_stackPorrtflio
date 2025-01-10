@@ -51,21 +51,21 @@ export default function Home() {
       <Header />
       
       <motion.div
-        className="flex gap-5 justify-center items-center "
+        className="flex gap-10 justify-center items-center "
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
       >
         <div className="w-1/3 md:w-1/3 lg:w-1/5">
-          <Image
-            src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
-            alt="Akif - Full Stack Developer"
-            className="rounded-full shadow-lg "
-            width={500}
-            height={500}
-          />
+        <Image
+  src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
+  alt="Akif - Full Stack Developer"
+  className="rounded-full shadow-lg w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80"
+  width={320} // default size (optional)
+  height={320} // default size (optional)
+/>
         </div>
-        <main className="flex flex-col items-center  justify-between h-screen  text-center md:text-left">
+        <main className="flex flex-col items-center   h-screen  text-center md:text-left">
           <motion.h2
             className="font-bold text-xl md:text-xl"
             initial="hidden"
