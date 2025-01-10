@@ -52,8 +52,8 @@ const ProjectShowcase = () => {
             <Card key={project.id} className="hover:shadow-lg">
               <CardHeader>
                 <Image
-                  src={project.image}
-                  alt={project.title}
+                  // src={project.image}
+                  // alt={project.title}
                   className="w-full h-48 object-cover rounded-t-lg"
                 />
                 <CardTitle className="mt-4 text-xl font-semibold">
