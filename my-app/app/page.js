@@ -58,7 +58,7 @@ export default function Home() {
         whileInView="visible"
         variants={fadeInAnimation}
       >
-        <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
+        <div className="w-50 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
           <Image
             src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
             alt="Akif - Full Stack Developer"
