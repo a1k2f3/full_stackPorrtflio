@@ -102,10 +102,12 @@ export default function Home() {
         whileInView="visible"
         variants={fadeInAnimation}
       >,
+          <motion.div>
         <motion.h2 className="text-4xl font-bold mb-5">About</motion.h2>
         <motion.p className="text-gray-400 leading-relaxed max-w-prose">
           With expertise in web development, Python, and Machine Learning, I am continuously learning new skills to enhance my technical knowledge and provide value to projects.
         </motion.p>
+      </motion.div>
         <div className="w-50 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
           <Image
             src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
