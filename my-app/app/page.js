@@ -46,64 +46,44 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.div
-        className="flex  items-center justify-center mx-auto max-w-screen-xl py-20 space-y-8 text-center"
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeInAnimation}
-      >
-        <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
-          <Image
-            src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
-            alt="Akif - Full Stack Developer"
-            className="object-cover object-center rounded-full"
-            width={320}
-            height={320}
-          />
-        </div>
-        <main className="space-y-5">
-          <motion.h2 className="font-bold text-xl md:text-2xl">
-            Assalam o Alaikum, I'm Akif,
-          </motion.h2>
-          <motion.h1 className="text-4xl font-extrabold md:text-5xl lg:text-6xl">
-            MERN Stack Developer
-          </motion.h1>
-          <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            I specialize in building high-quality, full-stack web applications using modern technologies. With experience in developing scalable backend services, interactive user interfaces, and real-time applications, I ensure that my solutions meet the latest industry standards.
-          </p>
-          <motion.div>
-            <Link
-              href="#contact"
-              className="text-blue-400 underline hover:text-blue-300 text-lg transition-colors duration-300"
-            >
-              Contact Me
-            </Link>
-          </motion.div>
+  className="flex flex-col gap-24 md:flex-row items-center justify-center mx-auto max-w-screen-xl py-20 px-4 space-y-8 md:space-y-0 md:space-x-10 text-center md:text-left"
+  initial="hidden"
+  whileInView="visible"
+  variants={fadeInAnimation}
+>
+  {/* Image Section */}
+  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
+    <Image
+      src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
+      alt="Akif - Full Stack Developer"
+      className="object-cover w-full h-full object-center rounded-full"
+      width={320}
+      height={320}
+    />
+  </div>
 
-          <div className="flex space-x-4 pt-5">
-            <Link
-              href="https://github.com/yourusername"
-              target="_blank"
-              className="text-gray-400 hover:text-white transition-colors duration-300"
-            >
-              GitHub
-            </Link>
-            <Link
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href="/resume.pdf"
-              target="_blank"
-              className="text-gray-400 hover:text-green-400 transition-colors duration-300"
-            >
-              View Resume
-            </Link>
-          </div>
-        </main>
-      </motion.div>
+  {/* Main Content Section */}
+  <main className="space-y-5 max-w-lg">
+    <motion.h2 className="font-bold text-xl md:text-2xl">
+      Assalam o Alaikum, I'm Akif,
+    </motion.h2>
+    <motion.h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl lg:text-6xl">
+      MERN Stack Developer
+    </motion.h1>
+    <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-2xl">
+      I specialize in building high-quality, full-stack web applications using modern technologies. With experience in developing scalable backend services, interactive user interfaces, and real-time applications, I ensure that my solutions meet the latest industry standards.
+    </p>
+    <motion.div>
+      <Link
+        href="#contact"
+        className="text-blue-400 underline hover:text-blue-300 text-base sm:text-lg transition-colors duration-300"
+      >
+        Contact Me
+      </Link>
+    </motion.div>
+  </main>
+</motion.div>
+
 
       {/* About Section */}
       <motion.section
