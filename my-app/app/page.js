@@ -61,6 +61,15 @@ export default function Home() {
         variants={fadeInAnimation}
       >
         <main className="flex flex-col items-center justify-center h-screen space-y-5 text-center md:text-left">
+        <div className="w-1/3 md:w-1/3 lg:w-1/5">
+          <Image
+            src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
+            alt="Akif - Full Stack Developer"
+            className="rounded-full shadow-lg w-full  h-auto"
+            width={300}
+            height={300}
+          />
+        </div>
           <motion.h2
             className="font-bold text-xl md:text-2xl"
             initial="hidden"
@@ -89,16 +98,7 @@ export default function Home() {
               Contact Me
             </Link>
           </motion.div>
-        </main>
-        <div className="w-1/3 md:w-1/3 lg:w-1/5">
-          <Image
-            src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
-            alt="Akif - Full Stack Developer"
-            className="rounded-full shadow-lg w-full  h-auto"
-            width={300}
-            height={300}
-          />
-        </div>
+        </main>        
       </motion.div>
 
       <motion.section
