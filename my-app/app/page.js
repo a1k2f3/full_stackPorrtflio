@@ -58,7 +58,7 @@ export default function Home() {
         whileInView="visible"
         variants={fadeInAnimation}
       >
-        <main className="flex flex-col items-center justify-center h-screen space-y-5 text-center md:text-left">
+        <main className="flex flex-col items-center justify-between h-screen space-y-5 text-center md:text-left">
           <motion.h2
             className="font-bold text-xl md:text-2xl"
             initial="hidden"
