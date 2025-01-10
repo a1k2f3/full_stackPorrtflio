@@ -50,12 +50,12 @@ export default function Home() {
   };
 
   return (
-    <div className={`${poppins.className} min-h-screen bg-gray-900 text-white`}>
+    <div className={`${poppins.className} min-h-screen bg-gray-900 overflow-hidden text-white`}>
       {/* Scroll Indicator */}
       <ScrollLinked />
       <Header />
       <motion.div
-        className="flex gap-5 justify-center items-center flex-wrap"
+        className="flex gap-5 justify-center items-center flex-wrap "
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
