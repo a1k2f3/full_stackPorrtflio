@@ -64,7 +64,7 @@ export default function Home() {
             alt="Akif - Full Stack Developer"
             className=" object-cover object-center rounded-full w-full "
             width={320}
-            height={320}
+            height={520}
           />
         </div>
         <main className="flex flex-col items-center justify-center text-center md:text-left space-y-5">
