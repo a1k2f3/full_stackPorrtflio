@@ -8,10 +8,8 @@ import { Poppins } from 'next/font/google';
 import ProjectShowcase from './Component/Project';
 import { motion } from 'framer-motion';
 import { useScroll, useSpring } from 'framer-motion';
-
 // Load Google Font
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
-
 // Scroll Linked Component for Scroll Indicator
 function ScrollLinked() {
   const { scrollYProgress } = useScroll();
@@ -53,7 +51,7 @@ export default function Home() {
       <Header />
       
       <motion.div
-        className="flex gap-5 justify-center items-center flex-wrap"
+        className="flex gap-5 justify-center items-center "
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
@@ -67,9 +65,9 @@ export default function Home() {
             height={500}
           />
         </div>
-        <main className="flex flex-col items-center  justify-between h-screen space-y-5 text-center md:text-left">
+        <main className="flex flex-col items-center  justify-between h-screen  text-center md:text-left">
           <motion.h2
-            className="font-bold text-xl md:text-2xl"
+            className="font-bold text-xl md:text-xl"
             initial="hidden"
             whileInView="visible"
             variants={fadeInAnimation}
@@ -82,7 +80,7 @@ export default function Home() {
             whileInView="visible"
             variants={fadeInAnimation}
           >
-            Full Stack Developer
+            MERN Stack Developer
           </motion.h1>
         
           <motion.div
