@@ -8,10 +8,11 @@ import { Poppins } from 'next/font/google';
 import ProjectShowcase from './Component/Project';
 import { motion } from 'framer-motion';
 import { useScroll, useSpring } from 'framer-motion';
-// Load Google Font
 
+// Load Google Font
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
+// Scroll Linked Component for Scroll Indicator
 function ScrollLinked() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -38,23 +39,19 @@ function ScrollLinked() {
   );
 }
 
-export default function Home() {
-  // Scroll effect: Fade in elements when they come into view
-  const fadeInAnimation = () => {
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
-      stiffness: 100,
-      damping: 30,
-      restDelta: 0.001,
-    });
-  };
+// Fade-in Animation Variants
+const fadeInAnimation = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.6 } },
+};
 
+export default function Home() {
   return (
-    <>
     <div className={`${poppins.className} min-h-screen bg-gray-900 text-white`}>
       {/* Scroll Indicator */}
       <ScrollLinked />
       <Header />
+      
       <motion.div
         className="flex gap-5 justify-center items-center flex-wrap"
         initial="hidden"
@@ -110,50 +107,50 @@ export default function Home() {
         variants={fadeInAnimation}
       >
         <motion.h2 className="text-4xl font-bold mb-5">About</motion.h2>
-        <motion.p className="text-gray-400 leading-relaxed w-50    text-wrap">
-          With·expertise·in·web·development,·Python,·and·Machine·Learning,·I·am·continuously·learning␍⏎··········new·skills·to·enhance·my·technical·knowledge·and·provide·value·to·projects.␍`
-          with
-          `·problems.·With·expertise·in·web·development,·Python,·and·Machine⏎··········Learning,·I·am·continuously·learning·new·skills·to·enhance·my⏎··········technical·knowledge·and·p
+        <motion.p className="text-gray-400 leading-relaxed max-w-prose">
+          With expertise in web development, Python, and Machine Learning, I am continuously learning new skills to enhance my technical knowledge and provide value to projects.
         </motion.p>
-</motion.section>
-        <motion.section
-          id="Experience"
-          initial="hidden"
-          whileInView="visible"
-          variants={fadeInAnimation}
-        >
-          <div className="flex justify-around mt-10 flex-wrap gap-10">
-            <motion.div
-              className="text-center p-5 bg-gray-800 rounded-xl shadow-md transition-transform transform hover:scale-105"
-              initial="hidden"
-              whileInView="visible"
-              variants={fadeInAnimation}
-            >
-              <h3 className="text-2xl font-bold">Web Development</h3>
-              <p className="text-gray-400 mt-2">1 Year Experience</p>
-            </motion.div>
-            <motion.div
-              className="text-center p-5 bg-gray-800 rounded-xl shadow-md transition-transform transform hover:scale-105"
-              initial="hidden"
-              whileInView="visible"
-              variants={fadeInAnimation}
-            >
-              <h3 className="text-2xl font-bold">Python</h3>
-              <p className="text-gray-400 mt-2">120+ Hours Experience</p>
-            </motion.div>
-            <motion.div
-              className="text-center p-5 bg-gray-800 rounded-xl shadow-md transition-transform transform hover:scale-105"
-              initial="hidden"
-              whileInView="visible"
-              variants={fadeInAnimation}
-            >
-              <h3 className="text-2xl font-bold">Machine Learning</h3>
-              <p className="text-gray-400 mt-2">120+ Hours Experience</p>
-            </motion.div>
-          </div>
-        </motion.section>
-      
+      </motion.section>
+
+      <motion.section
+        id="Experience"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInAnimation}
+      >
+        <div className="flex justify-around mt-10 flex-wrap gap-10">
+          <motion.div
+            className="text-center p-5 bg-gray-800 rounded-xl shadow-md transition-transform transform hover:scale-105"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInAnimation}
+          >
+            <h3 className="text-2xl font-bold">Web Development</h3>
+            <p className="text-gray-400 mt-2">1 Year Experience</p>
+          </motion.div>
+          <motion.div
+            className="text-center p-5 bg-gray-800 rounded-xl shadow-md transition-transform transform hover:scale-105"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInAnimation}
+          >
+            <h3 className="text-2xl font-bold">Python</h3>
+            <p className="text-gray-400 mt-2">120+ Hours Experience</p>
+          </motion.div>
+          <motion.div
+            className="text-center p-5 bg-gray-800 rounded-xl shadow-md transition-transform transform hover:scale-105"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInAnimation}
+          >
+            <h3 className="text-2xl font-bold">Machine Learning</h3>
+            <p className="text-gray-400 mt-2">120+ Hours Experience</p>
+          </motion.div>
+        </div>
+      </motion.section>
+
       <ProjectShowcase />
+
       <motion.section
         id="contact"
         className="p-10 bg-gray-800 rounded-tl-3xl rounded-tr-3xl mt-10"
@@ -165,6 +162,5 @@ export default function Home() {
         <Form id="contact" />
       </motion.section>
     </div>
-    </>
   );
 }
