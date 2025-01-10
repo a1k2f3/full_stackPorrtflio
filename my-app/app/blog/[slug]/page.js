@@ -1,6 +1,6 @@
 'use client';
 import { useParams, useRouter } from 'next/navigation';
-import blogPosts from '../blog';
+
 export default function Post() {
   const router = useRouter();
   const { slug } = useParams();
