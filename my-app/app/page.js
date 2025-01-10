@@ -107,7 +107,7 @@ export default function Home() {
         variants={fadeInAnimation}
       >
         <motion.h2 className="text-4xl font-bold mb-5">About</motion.h2>
-        <motion.p className="text-gray-400 leading-relaxed max-w-prose">
+        <motion.p className="text-gray-400 leading-relaxed overflow-hidden max-w-prose">
           With expertise in web development, Python, and Machine Learning, I am continuously learning new skills to enhance my technical knowledge and provide value to projects.
         </motion.p>
       </motion.section>
