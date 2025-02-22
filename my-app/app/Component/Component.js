@@ -60,12 +60,8 @@ const Header = () => {
         >
           Projects
         </Link>
-        <Link
-          href="blog"
-          className="hover:text-gray-400 hover:scale-105 transform transition-transform duration-300 font-semibold tracking-wide"
-        >
-          Blogs
-        </Link>
+        
+      
       </nav>
 
       <a
