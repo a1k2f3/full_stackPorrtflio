@@ -167,7 +167,7 @@ export default function Home() {
             {/* <p className="text-gray-400 mt-2">120+ Hours Experience</p> */}
           </motion.div>
         </div>
-        
+
       </motion.section>
 
       {/* Projects Section */}
