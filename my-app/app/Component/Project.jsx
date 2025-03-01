@@ -22,7 +22,7 @@ const projects = [
     title: 'Chat Application',
     description:
       'A real-time chat application with private messaging and online status indicators.',
-    image: '/images/chatapp.jpg',
+    image: 'C:\webdevolpment project\portfolo\webengenieringproject\backend\full_stackPorrtflio\my-app\public\image.png',
     link: 'https://github.com/a1k2f3/chat_app3.git',
   },
   {
@@ -52,7 +52,7 @@ const ProjectShowcase = () => {
             <Card key={project.id} className="hover:shadow-lg">
               <CardHeader>
                 <Image
-                  // src={project.image}
+                  src={project.image}
                   // alt={project.title}
                   className="w-full h-48 object-cover rounded-t-lg"
                 />
