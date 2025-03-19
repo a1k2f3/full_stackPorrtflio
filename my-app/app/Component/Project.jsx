@@ -45,6 +45,7 @@ const projects = [
     id: 5,
     title: 'portfolio',
     description:
+    
       'A responsive portfolio website showcasing my projects and skills, built using Next.js.',
     image: '/images/portfolio.jpg',
     link: 'https://github.com/a1k2f3/full_stackPorrtflio.git',
