@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* styles/globals.css */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -17,13 +16,11 @@ body {
 .shadcn-component-class {
   font-family: 'Poppins', sans-serif !important;
 }
-
 @layer utilities {
   .text-balance {
     text-align: justify;
   }
 }
-
 @layer base {
   :root {
     --background: 0 0% 100%;

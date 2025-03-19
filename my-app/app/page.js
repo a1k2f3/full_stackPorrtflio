@@ -1,4 +1,7 @@
 "use client"
+// import "../app/globals.css";
+// import "./my-app/app/globals.css"
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from './Component/Component';
