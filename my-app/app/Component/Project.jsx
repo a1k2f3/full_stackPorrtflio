@@ -35,12 +35,29 @@ const projects = [
   },
   {
     id: 4,
-    title: 'social media app',
+    title: 'social media app backend',
+    description:
+      'A socailmedia app backend iwhich user can create an acount and add the post user can saerch the user and user can comment on post jwt authentication, built using express.js.',
+    image: '/images/portfolio.jpg',
+    link: 'https://github.com/a1k2f3/socialmedia.git',
+  },
+  {
+    id: 4,
+    title: 'portfolio',
     description:
       'A responsive portfolio website showcasing my projects and skills, built using Next.js.',
     image: '/images/portfolio.jpg',
-    link: '/projects/portfolio',
+    link: 'https://github.com/a1k2f3/full_stackPorrtflio.git',
   },
+  {
+    id: 4,
+    title: 'Taskmanegment App',
+    description:
+      'A responsive   in which user can see the task and submit th task and admin can asin the task to the user  and  create and delet the task, built using Next.js.',
+    image: '/images/portfolio.jpg',
+    link: 'https://github.com/a1k2f3/full_stackPorrtflio.git',
+  },
+
 ];
 const ProjectShowcase = () => {
   return (

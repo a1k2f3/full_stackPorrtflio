@@ -103,7 +103,7 @@ export default function Home() {
         <div className="flex  gap-6 mb-5">
         {/* Social Media Links */}
         <a
-          href="https://github.com/your-username"
+          href="https://github.com/a1k2f3/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-white transition-colors duration-300"
@@ -158,7 +158,6 @@ export default function Home() {
             className="text-center p-5 bg-gray-700 rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
           >
             <h3 className="text-2xl font-bold">Python</h3>
-            {/* <p className="text-gray-400 mt-2">120+ Hours Experience</p> */}
           </motion.div>
           <motion.div
             className="text-center p-5 bg-gray-700 rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
@@ -167,12 +166,9 @@ export default function Home() {
             {/* <p className="text-gray-400 mt-2">120+ Hours Experience</p> */}
           </motion.div>
         </div>
-
       </motion.section>
-
       {/* Projects Section */}
       <ProjectShowcase />
-
       {/* Contact Section */}
       <motion.section
         id="contact"
