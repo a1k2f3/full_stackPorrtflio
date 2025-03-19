@@ -42,7 +42,7 @@ const projects = [
     link: 'https://github.com/a1k2f3/socialmedia.git',
   },
   {
-    id: 4,
+    id: 5,
     title: 'portfolio',
     description:
       'A responsive portfolio website showcasing my projects and skills, built using Next.js.',
@@ -50,7 +50,7 @@ const projects = [
     link: 'https://github.com/a1k2f3/full_stackPorrtflio.git',
   },
   {
-    id: 4,
+    id: 6,
     title: 'Taskmanegment App',
     description:
       'A responsive   in which user can see the task and submit th task and admin can asin the task to the user  and  create and delet the task, built using Next.js.',
