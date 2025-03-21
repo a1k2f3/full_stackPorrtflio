@@ -1,5 +1,5 @@
 "use client"
-// import "../app/globals.css";
+import "./globals.css";
 // import "./my-app/app/globals.css"
 
 import Link from 'next/link';

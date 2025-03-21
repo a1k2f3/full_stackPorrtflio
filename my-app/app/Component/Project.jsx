@@ -69,11 +69,8 @@ const ProjectShowcase = () => {
           {projects.map((project) => (
             <Card key={project.id} className="hover:shadow-lg">
               <CardHeader>
-                <Image
-                  src={project.image}
-                  // alt={project.title}
-                  className="w-full h-48 object-cover rounded-t-lg"
-                />
+              <Image src="/images/ecommerce.jpg" width={200} 
+              height={200} alt="Ecommerce" />
                 <CardTitle className="mt-4 text-xl font-semibold">
                   {project.title}
                 </CardTitle>
