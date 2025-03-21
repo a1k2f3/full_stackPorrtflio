@@ -43,7 +43,7 @@ const Form = () => {
         <hr />
 
         <div className="w-full flex flex-col justify-center items-center mt-8">
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-4 w-full bg-white">
             {/* Name and Email Fields */}
             <div className="flex gap-4 justify-center flex-wrap">
               <input
