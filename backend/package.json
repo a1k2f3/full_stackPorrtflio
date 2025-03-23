@@ -4,8 +4,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
-      "dev": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "type": "module",
   "keywords": [],
@@ -17,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "mongoose": "^8.9.3",
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^6.9.16",
+    "openai": "^4.89.0"
   }
 }
