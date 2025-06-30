@@ -11,13 +11,14 @@ import Footer from './Component/Footer';
 import { Poppins } from 'next/font/google';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import Whatsappbutton from "./Component/Whatsappbutton";
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 function ScrollIndicator() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001,
+    restDelta: 0.021,
   });
   return (
     <motion.div
@@ -92,7 +93,7 @@ export default function Home() {
       {/* About Section */}
       <motion.section
         id="about"
-        className="p-10 flex   items-center"
+        className="p-10 flex   items-center gap-10"
         initial="hidden"
         whileInView="visible"
         variants={fadeInAnimation}
@@ -129,7 +130,7 @@ export default function Home() {
         </a>
       </div>
         </div>
-        <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
+        <div className="relative    w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
     <Image
       src="/WhatsApp Image 2024-09-24 at 19.46.40_d9a0a352.jpg"
       alt="Akif - Full Stack Developer"
@@ -137,18 +138,7 @@ export default function Home() {
       width={320}
       height={320}
     />
-      <a
-      href="https://wa.me/+923117687149" // Replace with your number
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-50"
-    >
-      <img
-        src="https://img.icons8.com/color/48/000000/whatsapp.png"
-        alt="Chat on WhatsApp"
-        className="w-12 h-12"
-      />
-    </a>
+     
   </div>
         
       </motion.section>
@@ -197,6 +187,7 @@ export default function Home() {
       </motion.section>
 
       {/* Footer */}
+      <Whatsappbutton/>
       <Footer />
     </div>
   );

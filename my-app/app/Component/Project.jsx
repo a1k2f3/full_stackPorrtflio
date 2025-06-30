@@ -14,15 +14,15 @@ const projects = [
     title: 'E-commerce Website',
     description:
       'A fully functional e-commerce platform with user authentication, product listings, and payment integration.',
-    image: '/images/ecommerce.jpg',
-    link: 'https://github.com/a1k2f3/ShopOnline-front-end.git',
+    image: 'my-app\public\Logo Design for ShopOnline (4).png',
+    link: 'https://shponline.vercel.app/',
   },
   {
     id: 2,
     title: 'Chat Application',
     description:
       'A real-time chat application with private messaging and online status indicators.',
-    image: 'C:\webdevolpment project\portfolo\webengenieringproject\backend\full_stackPorrtflio\my-app\public\image.png',
+    image: '/publicimage.png',
     link: 'https://github.com/a1k2f3/chat_app3.git',
   },
   {
@@ -69,7 +69,7 @@ const ProjectShowcase = () => {
           {projects.map((project) => (
             <Card key={project.id} className="hover:shadow-lg">
               <CardHeader>
-              <Image src="/images/ecommerce.jpg" width={200} 
+              <Image src={project.image} width={200} 
               height={200} alt="Ecommerce" />
                 <CardTitle className="mt-4 text-xl font-semibold">
                   {project.title}
